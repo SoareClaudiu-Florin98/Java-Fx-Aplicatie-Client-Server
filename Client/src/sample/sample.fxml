@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerClient">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="444.0" prefWidth="518.0">
+         <children>
+            <TextField fx:id="tNume" layoutX="223.0" layoutY="224.0" prefHeight="25.0" prefWidth="295.0">
+               <effect>
+                  <ColorAdjust brightness="0.1" contrast="-0.1" hue="-0.36" saturation="-0.14" />
+               </effect></TextField>
+            <TextArea fx:id="tout" layoutX="4.0" layoutY="286.0" prefHeight="158.0" prefWidth="517.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#fff600" />
+                     </light>
+                  </Lighting>
+               </effect></TextArea>
+            <Button layoutX="4.0" layoutY="256.0" mnemonicParsing="false" onAction="#cerere" prefHeight="25.0" prefWidth="517.0" text="Afiseaza figurile">
+               <effect>
+                  <SepiaTone />
+               </effect></Button>
+            <Text layoutX="7.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vreau sa vad figurile geometrice de tip : " wrappingWidth="215.908203125" />
+            <TextArea fx:id="txOut" layoutX="4.0" layoutY="39.0" prefHeight="177.0" prefWidth="517.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#fbff00" />
+                     </light>
+                  </Lighting>
+               </effect></TextArea>
+            <Button layoutY="-4.0" mnemonicParsing="false" onAction="#all" prefHeight="43.0" prefWidth="267.0" text="Afiseaza toate  figurile geometrice">
+               <effect>
+                  <SepiaTone />
+               </effect></Button>
+            <Button layoutX="264.0" layoutY="-4.0" mnemonicParsing="false" onAction="#golesteLista" prefHeight="43.0" prefWidth="261.0" text="Goleste lista">
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
